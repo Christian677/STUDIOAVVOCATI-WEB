@@ -31,3 +31,22 @@
     </div>
 </body>
 </html>
+
+<!--Integrazione Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$( document ).ready(function() {
+    console.log( "ready!" );
+    function scrollWin(anc){
+	target = $(anc);
+	$('html, body').animate({
+		scrollTop: target.offset().top
+	}, 1000);
+}
+
+$("#down-arrow").click(function() {
+    scrollWin(".py-4");
+});
+});
+</script>
