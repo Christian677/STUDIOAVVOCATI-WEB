@@ -12,7 +12,7 @@
     <div class="bg-img container overflow-hidden mt-7">
 
         <div class="content overflow-hidden">
-          <header>Register</header>
+          <header>Registrati</header>
           <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -20,7 +20,7 @@
               <span class="fa fa-user"></span>
               <div class="col-md-6">
                   <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" 
-                  required autocomplete="name" autofocus placeholder="Name">
+                  required autocomplete="name" autofocus placeholder="Nome">
                   @error('name')
                       <span class="invalid-feedback" role="alert">
                           <strong>{{ $message }}</strong>
@@ -33,7 +33,7 @@
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
                     <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" 
-                    required autocomplete="surname" autofocus placeholder="Surname">
+                    required autocomplete="surname" autofocus placeholder="Cognome">
                     @error('surname')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -46,7 +46,7 @@
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" 
-                    required autocomplete="email" autofocus placeholder="email">
+                    required autocomplete="email" autofocus placeholder="Email">
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -59,7 +59,7 @@
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
                     <input id="birthdate" type="date" class="form-control @error('birthdate') is-invalid @enderror" name="birthdate" value="{{ old('birthdate') }}" 
-                    required autocomplete="birthdate" autofocus placeholder="Birthdate">
+                    required autocomplete="birthdate" autofocus placeholder="Data di nascita">
                     @error('birthdate')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -86,13 +86,13 @@
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password"
-                    placeholder="Password confirmation">
+                    placeholder="Conferma password">
                 </div>
             </div>
-
+            
             <div class="field space">
               <button type="submit" class="btn btn-primary">
-                {{ __('Register') }}
+                {{ __('Registrati') }}
               </button>
             </div>
 
