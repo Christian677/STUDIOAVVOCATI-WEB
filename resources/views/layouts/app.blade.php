@@ -24,6 +24,7 @@
        
     {{-- Navbar --}}
     @include('layouts.navbar')
+    <h1>prova</h1>
 
     {{-- Content --}}
     <main class="py-3">
@@ -33,21 +34,22 @@
 </body>
 </html>
 
+
+
+
 <!--Integrazione Jquery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+
 
 <script>
-$( document ).ready(function() {
-    console.log( "ready!" );
-    function scrollWin(anc){
-	target = $(anc);
-	$('html, body').animate({
-		scrollTop: target.offset().top
-	}, 1000);
+$(document).ready(function() {
+    console.log("pronto");
+    function scroll_to(id) {
+  $('html,body').animate({
+    scrollTop: $('#'+id).offset().top
+  },'slow');
 }
 
-$("#down-arrow").click(function() {
-    scrollWin(".py-4");
-});
 });
 </script>
+

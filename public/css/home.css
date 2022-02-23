@@ -68,10 +68,8 @@ a {
 
 /* Logo */
 img.logo {
-    width: "128px";
-    height: "128px";
-    object-fit: cover;
-    object-position: center;
+    width: "125px";
+    height: "125px";
 }
 
 /* Content */
