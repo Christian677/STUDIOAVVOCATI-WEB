@@ -13,7 +13,9 @@
 
         <div class="content overflow-hidden">
           <header>Login</header>
-          <form action = "#">
+          <form method="POST" action="{{ route('login') }}">
+
+            @csrf
 
             <div class="field">
               <span class="fa fa-user"></span>
@@ -38,11 +40,17 @@
             </div>
 
             <div class="pass">
-              <a href="#">Password dimenticata?</a>
+                @if (Route::has('password.request'))
+                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                        Password dimenticata?
+                    </a>
+                @endif
             </div>
 
             <div class="field">
-              <input type="submit" value="LOGIN">
+              <button type="submit" class="btn btn-primary">
+                {{ __('Login') }}
+              </button>
             </div>
 
           </form>

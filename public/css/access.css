@@ -89,9 +89,10 @@
 .pass:hover a {
     text-decoration: underline;
 }
-.field input[type="submit"] {
+.field button {
     background: #3498db;
     border: 1px solid #2691d9;
+    width: 100%;
     color: white;
     font-size: 18px;
     letter-spacing: 1px;
