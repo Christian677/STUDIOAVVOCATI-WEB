@@ -263,7 +263,7 @@ a {
     text-decoration: underline;
 }
 a:hover {
-    color: #0a58ca;
+    /* color: #0a58ca; */
 }
 
 a:not([href]):not([class]),
@@ -7672,6 +7672,14 @@ fieldset:disabled .btn {
 
 .mt-5 {
     margin-top: 3rem !important;
+}
+
+.mt-6 {
+    margin-top: 4.5rem !important;
+}
+
+.mt-7 {
+    margin-top: 6rem !important;
 }
 
 .mt-auto {

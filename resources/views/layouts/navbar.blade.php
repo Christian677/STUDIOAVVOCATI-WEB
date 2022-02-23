@@ -1,8 +1,10 @@
 <nav class="shadow-lg">
     <ul>
-      <li><a href="#" class="accedi-registrati"></a><strong>ACCEDI O REGISTRATI</strong></li>
-      <li><a href="#" class="servizi"></a><strong>SERVIZI</strong></li>
-      <li><a href="#" class="chi-siamo"></a><strong>CHI SIAMO</strong></li>
-      <li><a href="#" class="area-riservata"></a><strong>AREA RISERVATA</strong></li>
+      @guest
+         <li><a href="{{route('login')}}" class="accedi-registrati"><strong>ACCEDI O REGISTRATI</strong></a></li>
+      @endguest
+      <li><a href="#" class="servizi"><strong>SERVIZI</strong></a></li>
+      <li><a href="#" class="chi-siamo"><strong>CHI SIAMO</strong></a></li>
+      <li><a href="#" class="area-riservata"><strong>AREA RISERVATA</strong></a></li>
     </ul>
 </nav>

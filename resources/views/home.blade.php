@@ -6,5 +6,4 @@
     <h1>Studio Casponi</h1>
     <h1 class="arrow" id="down-arrow">▼</h1>
 </div>
-
 @endsection
