@@ -2,8 +2,7 @@
 
 @section('content')
 <div class="center-text">
-    
-    <img src="https://lirp.cdn-website.com/3521c4ef/dms3rep/multi/opt/avvocati-ferraris-asti-007-126w.png"/>
+    <img src="{{URL::to('/')}}/images/disegno.svg" class="logo"/>
     <h1>Studio Casponi</h1>
     <h1 class="arrow" id="down-arrow">▼</h1>
     
@@ -11,6 +10,10 @@
 <style>
     body{
         background-color: #C0C0C0;
+    }
+    img.logo{
+        width = "128px";
+        height = "128px";
     }
     div.center-text{
         width: 50%;
