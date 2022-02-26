@@ -17,25 +17,24 @@
 
             @csrf
 
-            <div class="field">
-              <span class="fa fa-user"></span>
-              <input type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email o numero di telefono" >
-              @error('email')
-                    <span class="invalid-feedback" role="alert">
-                         <strong>{{ $message }}</strong>
-                    </span>
-              @enderror
-            </div>
+            {{-- Custom it --}}
+            @if($errors->any())
+            <span class="error-message" role="alert">
+            <strong>Invalid email or password</strong>
+            </span>
+           @enderror
+
+            <div style="padding-top: 18px">
+              <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="email"  name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email o numero di telefono" >
+              </div>
+
 
             <div class="field space">
               <span class="fa fa-lock"></span>
               <input id="password" type="password" class="pass-key form-control @error('password') is-invalid @enderror" name="password" required 
               autocomplete="current-password" placeholder="Password">
-              @error('password')
-                 <span class="invalid-feedback" role="alert">
-                 <strong>{{ $message }}</strong>
-                 </span>
-              @enderror
               <span class="show">SHOW</span>
             </div>
 
@@ -51,6 +50,7 @@
               <button type="submit" class="btn btn-primary">
                 {{ __('Login') }}
               </button>
+            </div>
             </div>
 
           </form>

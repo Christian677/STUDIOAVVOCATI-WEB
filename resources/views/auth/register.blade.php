@@ -16,69 +16,50 @@
           <form method="POST" action="{{ route('register') }}">
             @csrf
 
+            {{-- Custom it --}}
+            @if($errors->any())
+            <span class="error-message" role="alert">
+            <strong>Invalid field</strong>
+            </span>
+           @enderror
+
             <div class="field">
               <span class="fa fa-user"></span>
               <div class="col-md-6">
-                  <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" 
+                  <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" 
                   required autocomplete="name" autofocus placeholder="Nome">
-                  @error('name')
-                      <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
-                      </span>
-                  @enderror
               </div>
             </div>
 
             <div class="field space">
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
-                    <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" 
+                    <input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}" 
                     required autocomplete="surname" autofocus placeholder="Cognome">
-                    @error('surname')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
             </div>
 
             <div class="field space">
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" 
+                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" 
                     required autocomplete="email" autofocus placeholder="Email">
-                    @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
             </div>
 
             <div class="field space">
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
-                    <input id="birthdate" type="date" class="form-control @error('birthdate') is-invalid @enderror" name="birthdate" value="{{ old('birthdate') }}" 
+                    <input id="birthdate" type="date" class="form-control" name="birthdate" value="{{ old('birthdate') }}" 
                     required autocomplete="birthdate" autofocus placeholder="Data di nascita">
-                    @error('birthdate')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
             </div>
 
             <div class="field space">
                 <span class="fa fa-user"></span>
                 <div class="col-md-6">
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"
+                    <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password"
                     placeholder="Password">
-
-                    @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
             </div>
 
