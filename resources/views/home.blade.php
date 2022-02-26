@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="center-text">
-    <!--<img src="{{URL::to('/')}}/images/disegno.svg" class="logo"/>-->
+    <img src="{{URL::to('/')}}/images/martelletto.svg" class="logo"/>
+
+    <img src="{{URL::to('/')}}/images/bilancia.svg" class="logo"/>
 
     <h1>Studio Casponi</h1>
 
