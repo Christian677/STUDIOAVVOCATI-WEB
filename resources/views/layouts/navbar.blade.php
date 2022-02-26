@@ -13,11 +13,46 @@
             </form>
          </li>
       @endauth
-      <li><a href="#" class="servizi"><strong>SERVIZI</strong></a></li>
-      <li><a href="#" class="chi-siamo"><strong>CHI SIAMO</strong></a></li>
-      <li><a href="#" class="area-riservata"><strong>AREA RISERVATA</strong></a></li>
+      <div class="secservizi">
+      
+     
+      <li><a href="home.blade.php" class="servizi"><strong>SERVIZI</strong></a></li></div>
+      <div class="secchisiamo">
+        <li><a href="home.blade.php" class="chi-siamo"><strong>CHI SIAMO</strong></a></li></div>
+        <div class="secarearis">
+          <li><a href="home.blade.php" class="area-riservata"><strong>AREA RISERVATA</strong></a></li></div>
+          <h1>
+      <img src="{{URL::to('/')}}/images/martelletto.svg" class="logo"/>
+      Studio Casponi
+      <img src="{{URL::to('/')}}/images/bilancia.svg" class="logo"/>
+      </h1>
       @auth
-      <li><a href="#" class="accedi-registrati"><strong>{{Auth::user()->name}}</strong></a></li>
+      <div class="secuser">
+      <li><a href="#" class="accedi-registrati"><strong>{{Auth::user()->name}}</strong></a></li></div>
       @endauth
     </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("li").on({
+        mouseenter: function(){
+        $(this).css({"font-family": "Segoe UI","text-decoration": "underline"});
+        }
+    });    
+});
+</script>
+<style>
+
+.secservizi{
+  
+}
+
+
+</style>
 </nav>
+
+
+
+
+
